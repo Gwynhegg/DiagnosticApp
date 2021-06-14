@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace DiagnosticApp.LoginPage
+namespace DiagnosticApp.WelcomePage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class WelcomePage : ContentPage
     {
-        public LoginPage()
+        public WelcomePage()
         {
             InitializeComponent();
         }

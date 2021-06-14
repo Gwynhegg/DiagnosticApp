@@ -10,7 +10,7 @@ namespace DiagnosticApp
         {
             InitializeComponent();
 
-            MainPage = new LoginPage.MainLoginPage();
+            MainPage = new WelcomePage.MainWelcomePage();
         }
 
         protected override void OnStart()
