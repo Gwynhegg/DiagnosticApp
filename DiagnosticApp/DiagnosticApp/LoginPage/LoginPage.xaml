@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiagnosticApp.LoginPage.LoginPage"
+             BackgroundColor="White"
+             Title="Тестирование"
+             IconImageSource="test.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="40, 0, 40, 40"/>
+                <Setter Property="HeightRequest" Value="90"/>
+                <Setter Property="BackgroundColor" Value="#000040"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BorderColor" Value="#4CAF50"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Frame x:Name="FrameExtContainer" Margin="0, 0, 0, 100" Padding="0, 0, 0, 0" HasShadow="False" HorizontalOptions="FillAndExpand" CornerRadius="0" 
+                   BackgroundColor="#000040" >
+                <Frame x:Name="FrameIntContainer" Margin="0, 10, 0, 10" Padding="5,30,5,30" HasShadow="False" HorizontalOptions="FillAndExpand" CornerRadius="0" 
+                       BackgroundColor="White" >
+                    <Label Text="Добро пожаловать" FontAttributes="Bold" TextColor="#000040" FontSize="33" HorizontalOptions="Center"/>
+                </Frame>
+            </Frame>
+            <Button Text="Войти в аккаунт"  Style="{StaticResource buttonStyle}"/>
+            <Button Text="Пройти тестирование" Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
