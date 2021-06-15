@@ -9,8 +9,9 @@ namespace DiagnosticApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new WelcomePage.MainWelcomePage();
+            var page = new WelcomePage.MainWelcomePage();
+            NavigationPage.SetHasNavigationBar(page, false);
+            MainPage = new NavigationPage(page);
         }
 
         protected override void OnStart()
