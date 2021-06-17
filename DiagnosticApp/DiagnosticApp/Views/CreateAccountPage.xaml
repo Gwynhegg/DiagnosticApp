@@ -9,7 +9,7 @@
                 <StackLayout x:Name="friendStack">
                     <Label Style="{StaticResource LableStyle}" Text="Логин (Эл. почта)" />
                     <Frame Style="{StaticResource FrameStyle}">
-                        <controls:CustomEntry x:Name="txtLogin" Keyboard="Text" Style="{StaticResource EntryStyle}" Text="{Binding Login}"></controls:CustomEntry>
+                        <controls:CustomEntry x:Name="txtLogin" Keyboard="Email" Style="{StaticResource EntryStyle}" Text="{Binding Login}"></controls:CustomEntry>
                     </Frame>
                     <Label Style="{StaticResource LableStyle}" Text="Пароль" />
                     <Frame Style="{StaticResource FrameStyle}">

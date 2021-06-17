@@ -1,11 +1,12 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
+using DiagnosticApp.Views;
 
 namespace DiagnosticApp.ViewModels
 {
     public class CreateAccountViewModel
-    { 
+    {
         public ICommand CreateAccountCommand { protected set; get; }
         public CreateAccountViewModel()
         {
@@ -19,6 +20,7 @@ namespace DiagnosticApp.ViewModels
                 if (account.Password == account.ConfirmPassword)
                 {
                     account.ConfirmPassword = "";
+                    _ = account.Navigation.PushAsync(new EnterUserInfoAccountPage(account));
                 }
                 else
                 {

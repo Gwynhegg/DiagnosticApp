@@ -7,6 +7,7 @@ namespace DiagnosticApp.ViewModels
     public class AccountViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public INavigation Navigation { get; set; }
         public Account Account { get; private set; }
         CreateAccountViewModel cavm;
 

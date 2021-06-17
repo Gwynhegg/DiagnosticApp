@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DiagnosticApp.CustomEntry" xmlns:viewmodels="clr-namespace:DiagnosticApp.ViewModels" x:DataType="viewmodels:AccountViewModel"
+             x:Class="DiagnosticApp.Views.EnterUserInfoAccountPage"
+             Title="Введите информацию о себе">
+    <ScrollView>
+        <StackLayout Margin="0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame Margin="20, 0" HasShadow="False" CornerRadius="5" BorderColor="{StaticResource BorderColor}" BackgroundColor="#F7F7F7">
+                <StackLayout x:Name="friendStack">
+                    <Label Style="{StaticResource LableStyle}" Text="Имя" />
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <controls:CustomEntry x:Name="txtName" Keyboard="Text" Style="{StaticResource EntryStyle}" Text="{Binding Name}"></controls:CustomEntry>
+                    </Frame>
+                    <Label Style="{StaticResource LableStyle}" Text="Фамилия" />
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <controls:CustomEntry x:Name="txtSurname" Keyboard="Text" Style="{StaticResource EntryStyle}" Text="{Binding Surname}"></controls:CustomEntry>
+                    </Frame>
+                    <Label Style="{StaticResource LableStyle}" Text="Отчество" />
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <controls:CustomEntry x:Name="txtPatronymic" Keyboard="Text" Style="{StaticResource EntryStyle}" Text="{Binding Patronymic}"></controls:CustomEntry>
+                    </Frame>
+                    <Label Style="{StaticResource LableStyle}" Text="Возраст" />
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <controls:CustomEntry x:Name="txtAge" Keyboard="Numeric" Style="{StaticResource EntryStyle}" Text="{Binding Age}"></controls:CustomEntry>
+                    </Frame>
+                    <Label Style="{StaticResource LableStyle}" Text="Вес" />
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <controls:CustomEntry x:Name="txtWeight" Keyboard="Numeric" Style="{StaticResource EntryStyle}" Text="{Binding Weight}"></controls:CustomEntry>
+                    </Frame>
+                    <Label Style="{StaticResource LableStyle}" Text="Ваш пол:" />
+                    <RadioButton Content="Мужской" CheckedChanged="OnSexRadioButtonCheckedChanged"/>
+                    <RadioButton Content="Женский" CheckedChanged="OnSexRadioButtonCheckedChanged"/>
+                    <Button Margin="100,20" BorderRadius="6" WidthRequest="200" x:Name="createAccountButton" TextColor="White" BackgroundColor="{StaticResource WelcomePageColor}" Text="Вход"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
