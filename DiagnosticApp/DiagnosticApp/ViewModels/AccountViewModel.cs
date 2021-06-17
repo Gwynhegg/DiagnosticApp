@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using DiagnosticApp.Models;
 using Xamarin.Forms;
 
@@ -11,84 +7,136 @@ namespace DiagnosticApp.ViewModels
     public class AccountViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private Account account;
         public INavigation Navigation { get; set; }
+        public Account Account { get; private set; }
+        CreateAccountViewModel cavm;
 
         public AccountViewModel()
         {
-            account = new Account();
+            Account = new Account();
+        }
+        public CreateAccountViewModel CreateViewModel
+        {
+            get { return cavm; }
+            set
+            {
+                if (cavm != value)
+                {
+                    cavm = value;
+                    OnPropertyChanged("CreateViewModel");
+                }
+            }
         }
         public string Name
         {
-            get => account.Name;
+            get => Account.Name;
             set
             {
-                if (account.Name != value)
+                if (Account.Name != value)
                 {
-                    account.Name = value;
+                    Account.Name = value;
                     OnPropertyChanged("Name");
                 }
             }
         }
         public string Surname
         {
-            get => account.Surname;
+            get => Account.Surname;
             set
             {
-                if (account.Surname != value)
+                if (Account.Surname != value)
                 {
-                    account.Surname = value;
+                    Account.Surname = value;
                     OnPropertyChanged("Surname");
                 }
             }
         }
         public string Patronymic
         {
-            get => account.Patronymic;
+            get => Account.Patronymic;
             set
             {
-                if (account.Patronymic != value)
+                if (Account.Patronymic != value)
                 {
-                    account.Patronymic = value;
-                    OnPropertyChanged("Patronymic");
+                    Account.Patronymic = value;
+                    OnPropertyChanged("Patronymic");                   
                 }
             }
         }
         public string Login
         {
-            get => account.Login;
+            get => Account.Login;
             set
             {
-                if (account.Login != value)
+                if (Account.Login != value)
                 {
-                    account.Login = value;
+                    Account.Login = value.Trim();
                     OnPropertyChanged("Login");
                 }
             }
         }
         public string Password
         {
-            get => account.Password;
+            get => Account.Password;
             set
             {
-                if (account.Password != value)
+                if (Account.Password != value)
                 {
-                    account.Password = value;
+                    Account.Password = value.Trim();
                     OnPropertyChanged("Password");
                 }
             }
         }
-        public bool IsValid
+        public string ConfirmPassword
         {
-            get
+            get => Account.ConfirmPassword;
+            set
             {
-                return (!string.IsNullOrEmpty(Name.Trim())) ||
-                    (!string.IsNullOrEmpty(Surname.Trim())) ||
-                    (!string.IsNullOrEmpty(Patronymic.Trim())) ||
-                    (!string.IsNullOrEmpty(Login.Trim())) ||
-                    (!string.IsNullOrEmpty(Password.Trim()));
+                if (Account.ConfirmPassword != value)
+                {
+                    Account.ConfirmPassword = value.Trim();
+                    OnPropertyChanged("ConfirmPassword");
+                }
             }
         }
+        public string Sex
+        {
+            get => Account.Sex;
+            set
+            {
+                if (Account.Sex != value)
+                {
+                    Account.Sex = value;
+                    OnPropertyChanged("Sex");
+                }
+            }
+        }
+        public string Weight
+        {
+            get => Account.Weight;
+            set
+            {
+                if (Account.Weight != value)
+                {
+                    Account.Weight = value;
+                    OnPropertyChanged("Weight");
+                }
+            }
+        }
+        public int Age
+        {
+            get => Account.Age;
+            set
+            {
+                if (Account.Age != value)
+                {
+                    Account.Age = value;
+                    OnPropertyChanged("Age");
+                }
+            }
+        }
+        public bool IsNullloginAndPas => !string.IsNullOrWhiteSpace(Login) &&
+                    !string.IsNullOrWhiteSpace(Password);
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)

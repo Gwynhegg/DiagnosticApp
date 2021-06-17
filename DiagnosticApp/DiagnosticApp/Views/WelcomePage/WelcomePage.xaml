@@ -2,10 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiagnosticApp.WelcomePage.WelcomePage"
-             BackgroundColor="White"
              Title="Тестирование"
-             IconImageSource="test.png"
-             NavigationPage.HasNavigationBar = "False">
+             IconImageSource="test.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="WelcomeButtonStyle" TargetType="Button">
