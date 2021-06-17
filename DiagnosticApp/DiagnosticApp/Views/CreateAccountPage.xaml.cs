@@ -11,8 +11,6 @@ namespace DiagnosticApp.Views
         public CreateAccountPage()
         {
             InitializeComponent();
-            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#000040");
-            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.White;
             BindingContext = new AccountViewModel();
         }
     }

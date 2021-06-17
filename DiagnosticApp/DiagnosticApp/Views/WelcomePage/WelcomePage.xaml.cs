@@ -22,7 +22,6 @@ namespace DiagnosticApp.WelcomePage
         private async void OnAuthorizationButtonClicked(object sender, System.EventArgs e)
         {
             bool result = await DisplayAlert("У вас уже есть аккаунт?", "", "Нет", "Да");
-            //await DisplayAlert("Уведомление", "Вы выбрали: "+ (result ? "Удалить" : "Отменить"), "OK");
             if (result)
                 _ = Navigation.PushAsync(new CreateAccountPage());
             else
