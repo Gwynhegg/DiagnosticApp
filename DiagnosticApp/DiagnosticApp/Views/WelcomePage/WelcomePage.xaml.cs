@@ -1,13 +1,7 @@
 ﻿using DiagnosticApp.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DiagnosticApp.ViewModels;
+
 
 namespace DiagnosticApp.WelcomePage
 {
@@ -23,7 +17,7 @@ namespace DiagnosticApp.WelcomePage
         {
             bool result = await DisplayAlert("У вас уже есть аккаунт?", "", "Нет", "Да");
             if (result)
-                _ = Navigation.PushAsync(new CreateAccountPage());
+                _ = Navigation.PushAsync(new CreateAccountPage(new ViewModels.AccountViewModel() { CreateViewModel = new ViewModels.CreateAccountViewModel() }));
             else
                 _ = Navigation.PushAsync(new SIgnInAccountPage());
         }
