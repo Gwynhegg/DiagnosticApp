@@ -50,6 +50,12 @@
             <Setter Property="TextColor" Value="#666666" />
             <Setter Property="FontSize" Value="Large" />
         </Style>
+        <Style x:Key="LableTestStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="15,5,15,5"/>
+        </Style>
         <Style x:Key="FrameStyle" TargetType="Frame">
             <Setter Property="HasShadow" Value="False" />
             <Setter Property="Padding" Value="0" />

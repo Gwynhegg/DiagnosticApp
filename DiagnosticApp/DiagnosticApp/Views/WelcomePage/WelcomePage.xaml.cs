@@ -21,5 +21,9 @@ namespace DiagnosticApp.WelcomePage
             else
                 _ = Navigation.PushAsync(new SIgnInAccountPage());
         }
+        private void OnAnonTestButtonClicked(object sender, System.EventArgs e)
+        {
+            _ = Navigation.PushAsync(new Views.AnonTestPage.StartAnonTestPage());
+        }
     }
 }

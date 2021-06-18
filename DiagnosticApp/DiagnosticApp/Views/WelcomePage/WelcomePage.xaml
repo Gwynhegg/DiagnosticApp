@@ -28,6 +28,6 @@
             </Frame>
         </Frame>
         <Button Text="Войти в аккаунт" Clicked="OnAuthorizationButtonClicked" Style="{StaticResource WelcomeButtonStyle}"/>
-        <Button Text="Пройти тестирование" Style="{StaticResource WelcomeButtonStyle}"/>
+        <Button Text="Пройти тестирование" Clicked="OnAnonTestButtonClicked" Style="{StaticResource WelcomeButtonStyle}"/>
     </StackLayout>
 </ContentPage>
