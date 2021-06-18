@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagnosticApp.Android", "DiagnosticApp\DiagnosticApp.Android\DiagnosticApp.Android.csproj", "{BCF6D5C8-2CA3-43E0-B2D8-C56CC69A400B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagnosticApp", "DiagnosticApp\DiagnosticApp\DiagnosticApp.csproj", "{FB6E34A3-E5D9-4240-8AD7-CB1915B26247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiagnosticApp", "DiagnosticApp\DiagnosticApp\DiagnosticApp.csproj", "{FB6E34A3-E5D9-4240-8AD7-CB1915B26247}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{96EBE492-388A-4D9F-AC15-BB3C8042320C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase", "DataBase\DataBase.csproj", "{EDF7C32F-0E14-4290-9240-EC806120E90D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,14 @@ Global
 		{FB6E34A3-E5D9-4240-8AD7-CB1915B26247}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB6E34A3-E5D9-4240-8AD7-CB1915B26247}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB6E34A3-E5D9-4240-8AD7-CB1915B26247}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{96EBE492-388A-4D9F-AC15-BB3C8042320C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EBE492-388A-4D9F-AC15-BB3C8042320C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EBE492-388A-4D9F-AC15-BB3C8042320C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EBE492-388A-4D9F-AC15-BB3C8042320C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF7C32F-0E14-4290-9240-EC806120E90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF7C32F-0E14-4290-9240-EC806120E90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF7C32F-0E14-4290-9240-EC806120E90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF7C32F-0E14-4290-9240-EC806120E90D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

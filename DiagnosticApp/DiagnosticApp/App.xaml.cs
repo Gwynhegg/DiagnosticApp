@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataBase.Repositories;
+using Models;
+using System;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +17,7 @@ namespace DiagnosticApp
             MainPage = new NavigationPage(page);
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
         }
 
